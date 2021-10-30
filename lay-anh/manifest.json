@@ -1,0 +1,68 @@
+{
+    "name": "Lấy ảnh taobao",
+    "description": "Tiện ích lấy ảnh taobao",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "permissions": ["storage", "activeTab"],
+    "content_scripts": [{
+            "matches": ["https://item.taobao.com/*"],
+            "css": ["/css/style.css"],
+            "js": ["/libs/js/jszip.js",
+                "/libs/js/FileSaver.js",
+                "/libs/js/jquery.js",
+                "/libs/js/axios.js",
+                "/libs/js/FileZip.js",
+                "/libs/js/md5.js",
+
+                "/libs/js/FileExt.js",
+                "/libs/js/FileZip.js",
+
+                "/js/download.js",
+                "/js/taobao/taobao.js"
+            ]
+        },
+        {
+            "matches": ["https://detail.tmall.com/*"],
+            "css": ["/css/style.css"],
+            "js": ["/libs/js/jszip.js",
+                "/libs/js/FileSaver.js",
+                "/libs/js/jquery.js",
+                "/libs/js/axios.js",
+                "/libs/js/md5.js",
+
+                "/libs/js/FileExt.js",
+                "/libs/js/FileZip.js",
+
+                "/js/download.js",
+                "/js/tmall/tmall.js"
+            ]
+        }
+
+
+
+    ],
+
+    "browser_action": {
+        "default_icon": {
+            "16": "/images/avt/16x16.png",
+            "32": "/images/avt/32x32.png",
+            "48": "/images/avt/48x48.png",
+            "64": "/images/avt/64x64.png",
+            "128": "/images/avt/128x128.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "/images/avt/16x16.png",
+        "32": "/images/avt/32x32.png",
+        "48": "/images/avt/48x48.png",
+        "64": "/images/avt/64x64.png",
+        "128": "/images/avt/128x128.png"
+    },
+
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    }
+
+}
